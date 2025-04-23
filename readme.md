@@ -1,8 +1,8 @@
-# 🌟 AI Creative Generation Pipeline
+# AI Creative Generation Pipeline
 
 A sophisticated AI application that transforms simple text prompts into stunning images and 3D models using a combination of local LLMs and Openfabric AI services.
 
-## 🚀 Project Overview
+## Project Overview
 
 This project implements an end-to-end creative pipeline that:
 
@@ -14,7 +14,7 @@ This project implements an end-to-end creative pipeline that:
 
 The application features both short-term memory (session-based) and long-term memory (persistent database storage), allowing for references to previous creations.
 
-## 🧠 Technical Architecture
+## Technical Architecture
 
 ### File Structure
 
@@ -125,7 +125,7 @@ The main execution flow:
 5. Processes the prompt through the pipeline
 6. Returns detailed response with paths to generated files
 
-## 💾 Data Persistence
+## Data Persistence
 
 The application uses SQLite for persistent storage in `datastore/memory.db`. The database schema includes:
 
@@ -139,13 +139,13 @@ The application uses SQLite for persistent storage in `datastore/memory.db`. The
   - metadata: JSON-formatted additional information
   - tags: JSON-formatted search tags
 
-## 🚪 Entry Points
+## Entry Points
 
 - **API Access**: The application runs on port 8888 and provides a Swagger UI at `http://localhost:8888/swagger-ui/#/App/post_execution`
 - **Docker**: Build and run using the provided Dockerfile
 - **Local Execution**: Run the application locally using `start.sh`
 
-## 🧩 Service Integration
+## Service Integration
 
 ### Openfabric AI Services
 
@@ -169,7 +169,7 @@ The application communicates with a locally-running Ollama instance:
 - Connection handling for both Docker and local environments
 - Fallback mechanisms for offline operation
 
-## 🛠️ Technical Details
+## Technical Details
 
 ### Prompt Enhancement
 
@@ -213,14 +213,14 @@ The application implements robust error handling:
 
 Failed operations degrade gracefully, returning partial results when possible.
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.8+
 - Ollama running locally (for LLM functionality)
 - Docker (optional, for containerized execution)
 - Openfabric SDK and account (for production use)
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Ensure Ollama is running locally with the DeepSeek model:
    ```
@@ -247,7 +247,7 @@ Failed operations degrade gracefully, returning partial results when possible.
    }
    ```
 
-## 📝 Testing
+## Testing
 
 The project includes multiple test files:
 - `test_app.py`: End-to-end application tests
@@ -262,7 +262,7 @@ Run tests using:
 python -m pytest
 ```
 
-## 🌐 Future Enhancements
+## Future Enhancements
 
 - FAISS/ChromaDB integration for vector-based memory search
 - Web UI with Streamlit or Gradio
