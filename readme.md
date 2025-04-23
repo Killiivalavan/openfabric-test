@@ -1,8 +1,4 @@
-# AI Creative Generation Pipeline
-
-A sophisticated AI application that transforms simple text prompts into stunning images and 3D models using a combination of local LLMs and Openfabric AI services.
-
-## Project Overview
+# Project Overview
 
 This project implements an end-to-end creative pipeline that:
 
